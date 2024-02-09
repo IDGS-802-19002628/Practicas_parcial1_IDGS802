@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block content %}
+{%import "_macros.html" as macros%}
+<h1>Calculadora de resistencia</h1>
+<form action="" method="POST">
+   
+
+         
+            <div class="col-3">
+                {{macros.input_forms(form.r1)}}
+            </div>
+            <div class="col-3">
+                {{macros.input_forms(form.r2)}}
+            </div>
+            <div class="col-3">
+                {{macros.input_forms(form.r3)}}
+            </div><br>
+            {{macros.input_forms(form.radios)}}
+    
+    
+    <input class="btn btn-success" type="submit" name="btn1" value="Calcular"><br><br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Color 1</th>
+            <th scope="col">color 2</th>
+            <th scope="col">Color 3</th>
+            <th scope="col">Tolerancia</th>
+            <th scope="col">Valor</th>
+            <th scope="col">minimo</th>
+            <th scope="col">maximo</th>
+            
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="color: rgb(0, 0, 0);">
+            <th scope="row" style="background-color: {{hex1}};">{{co1}}</th>
+            <td style="background-color: {{hex2}};">{{col2}}</td>
+            <td style="background-color: {{hex3}};">{{col3}}</td>
+            <td style="background-color: {{hex4}};">{{tr}} {{valtr}}</td>
+            <td>{{valor1}}</td>
+            <td>{{minima}}</td>
+            <td>{{maxima}}</td>
+            
+          </tr>
+          
+       
+          
+          
+        </tbody>
+      </table>
+
+</form>
+
+    
+    {% endblock %}
+   
